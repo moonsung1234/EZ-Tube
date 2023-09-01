@@ -1,0 +1,332 @@
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* head */
+.head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    background-color: rgb(240, 240, 240);
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.menu {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.convert, .cut, .merge {
+    height: 100%;
+    padding: 0px 50px 0 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+.convert {
+    background-color: rgb(220, 220, 220);    
+}
+
+.convert:hover {
+    cursor: pointer;
+    background-color: rgb(220, 220, 220);
+}
+
+.cut:hover {
+    cursor: pointer;
+    background-color: rgb(220, 220, 220);
+}
+
+.merge:hover {
+    cursor: pointer;
+    background-color: rgb(220, 220, 220);
+}
+
+/* body */
+.body {
+    width: 100%;
+    height: 300%;
+    background-color: rgb(245, 245, 245);
+}
+
+.input {
+    width: 100%;
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 100px 150px 100px 150px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 10px rgb(235, 235, 235, 235);
+}
+
+.input_title {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 100;
+    padding-bottom: 50px;
+}
+
+.link_input {
+    width: 450px;
+    height: 50px;
+    font-size: 17px;
+    border: 5px solid orange;
+    padding: 0 20px 0 20px;
+}
+
+.link_input:focus {
+    outline: none;
+}
+
+.convert_button {
+    width: 150px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: 10px solid orange;
+}
+
+.convert_button:hover {
+    cursor: pointer;
+    background-color: red;
+    border: 10px solid red;
+}
+
+.input .loading {
+    width: 100%;
+    height: 480px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.input .loading img {
+    width: 150px;
+    height: 150px;
+}
+
+.video {
+    display: none;
+    justify-content: center;
+    padding: 100px 0 50px 0;
+}
+
+.video_wrap {
+    width: 400px;
+    padding: 40px 40px 40px 40px;
+}
+
+.image {
+    width: 400px;
+    height: 250px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.profile {
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile_content {
+    padding: 20px 0 0 20px;
+    font-size: 15px;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 40px 0 40px;
+    border-left: 1px solid black;
+}
+
+.download_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.mp3 {
+    font-weight: bold;
+    padding: 0 0 20px 0;
+}
+
+.mp4 {
+    font-weight: bold;
+}
+
+.mp3_download {
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.mp4_download {
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+.mp3_download:hover {
+    cursor: pointer;
+}
+
+.mp4_download {
+    cursor: pointer;
+}
+
+/* chart */
+.chart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.youtube, .melon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: white;
+    padding: 20px 50px 50px 50px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px 10px rgb(235, 235, 235, 235);
+}
+
+.youtube_head, .melon_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.youtube .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube .loading img {
+    width: 150px;
+    height: 150px;
+}
+
+.melon .loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.melon .loading img {
+    width: 150px;
+    height: 150px;
+}
+
+.youtube_wrap, .melon_wrap {
+    display: none;
+}
+
+.youtube_image img {
+    width: 100px;
+    height: 60px;
+}
+
+.melon_image img {
+    width: 60px;
+    height: 60px;
+}
+
+.youtube_title, .melon_title {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.one, .two, .three, .four, .five, .six, .seven {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.one:hover, .two:hover, .three:hover, .four:hover, .five:hover, .six:hover, .seven:hover {
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+}
+
+.rank {
+    padding-right: 50px;
+    font-size: 30px;
+}
+
+.youtube .music_image {
+    width: 130px;
+    height: 70px;
+    padding-right: 50px;
+}
+
+.melon .music_image {
+    width: 70px;
+    height: 70px;
+    padding-right: 50px;
+}
+
+.music_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.youtube .music_info .music_name {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-decoration-line: underline;
+}
+.melon .music_info .music_name {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+    text-decoration-line: underline;
+}
