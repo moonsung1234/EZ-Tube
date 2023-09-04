@@ -54,7 +54,7 @@ app.get("/download", (req, res) => {
       let [video_format, video_stream] = video;
       
       res.writeHead(200, {
-        "Content-Type" : "audio/mpeg",
+        "Content-Type" : "video/mp4",
         "Content-Disposition" : `attachment; filename="EZTube.mp4"`
       });
 
