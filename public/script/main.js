@@ -70,6 +70,43 @@ function get_video_id(str) {
     }
 }
 
+// add ads
+let ins = document.createElement('ins');
+let scr = document.createElement('script');
+var isMobile = /Mobi/i.test(window.navigator.userAgent);
+
+if(isMobile) {
+    ins.className = 'kakao_ad_area';
+    ins.style = "display:none;";
+    scr.async = 'true';
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute('data-ad-width', '320');
+    ins.setAttribute('data-ad-height', '100');
+    ins.setAttribute('data-ad-unit', "DAN-gknfxm2Afbby9wnS");
+    
+    document.querySelector('#ad').style.width = "320px";
+    document.querySelector('#ad').appendChild(ins);
+    document.querySelector('#ad').appendChild(scr);
+
+
+} else {
+    ins.className = 'kakao_ad_area';
+    ins.style = "display:none;";
+    scr.async = 'true';
+    scr.type = "text/javascript";
+    scr.src = "//t1.daumcdn.net/kas/static/ba.min.js";
+    ins.setAttribute('data-ad-width', '728');
+    ins.setAttribute('data-ad-height', '90');
+    ins.setAttribute('data-ad-unit', 'DAN-9uHnMSxbWt94qkdr');
+    
+    document.querySelector('#ad').style.width = "728px";
+    document.querySelector('#ad').appendChild(ins);
+    document.querySelector('#ad').appendChild(scr);
+
+    console.log("ad create!");
+}
+
 // request chart
 axios({
     url : location.href + "chart",
