@@ -39,6 +39,14 @@ doHash();
 doHash();
 doHash();
 doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "view")));
