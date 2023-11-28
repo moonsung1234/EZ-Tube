@@ -3,9 +3,42 @@ let youtube = require("./lib/youtube");
 let chart = require("./lib/chart");
 let stream = require("./lib/stream");
 
+let https = require("https");
+let crypto = require("crypto");
 let path = require("path");
 let express = require("express");
 let app = express();
+
+const start = Date.now()
+
+function doRequest() {
+    https.request('https://google.com', res => {
+        res.on('data', () => {});
+        res.on('end', () => {
+            console.log('Request:', Date.now() - start)
+        })
+    })
+    .end()
+}
+
+function doHash(){
+    crypto.pbkdf2("a", "b", 100000, 512, 'sha512', () => {
+        console.log("Hash:", Date.now() - start);
+    })
+}
+
+process.env.UV_THREADPOOL_SIZE = 100;
+
+doRequest();
+
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
+doHash();
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "view")));
@@ -29,8 +62,8 @@ app.get("/chart", (req, res) => {
     chart.get_melon_chart(7, m_result => {
       res.send({
         youtube : y_result,
-        melon : m_result        
-      })
+        melon : m_result
+      });
     });
   });
 });
