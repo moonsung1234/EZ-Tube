@@ -27,7 +27,7 @@ function doHash(){
     })
 }
 
-process.env.UV_THREADPOOL_SIZE = 1;
+process.env.UV_THREADPOOL_SIZE = 100;
 
 doRequest();
 
